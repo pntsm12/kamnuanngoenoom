@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="BcwokyN2W4FMCCIj4YbvGcFCJojtQgojttCnNHCTtL4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คำนวณเงินออมออนไลน์</title>
+<meta name="description" content="คำนวณเงินออมออนไลน์ฟรี รู้ว่าต้องออมเดือนละเท่าไหร่ถึงจะถึงเป้าหมาย คำนวณดอกเบี้ยทบต้น วางแผนการออมระยะยาว ใช้งานง่าย ไม่ต้องโหลดแอป">
+<meta name="keywords" content="คำนวณเงินออม, ออมเงิน, ดอกเบี้ยทบต้น, วางแผนการออม, เป้าหมายการออม">
+<meta property="og:title" content="คำนวณเงินออมออนไลน์">
+<meta property="og:description" content="คำนวณเงินออมออนไลน์ฟรี รู้ว่าต้องออมเดือนละเท่าไหร่ถึงจะถึงเป้าหมาย">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://pntsm12.github.io/kamnuanngoenoom/">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1063556443578237" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#FFFFFF;--bg2:#F7F7F5;--bg3:#F0EFEC;--border:#E4E4E0;--border2:#D4D4CF;--text:#1A1917;--text2:#706F6B;--text3:#B0AFA9;--ink:#1A1917;--accent:#2563EB;--header-bg:rgba(255,255,255,0.92);--logo-fill:#1A1917;}
+[data-theme="dark"]{--bg:#0F0F0F;--bg2:#1A1A1A;--bg3:#222222;--border:#2A2A2A;--border2:#333333;--text:#F0EFE8;--text2:#9A9890;--text3:#555450;--ink:#F0EFE8;--accent:#60A5FA;--header-bg:rgba(15,15,15,0.92);--logo-fill:#F0EFE8;}
+html{scroll-behavior:smooth;}
+body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;}
+header{position:sticky;top:0;z-index:100;background:var(--header-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:56px;display:flex;align-items:center;padding:0 20px;gap:10px;}
+.header-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex:1;}
+.logo-icon svg{width:32px;height:32px;display:block;}
+.logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.logo-text-th{font-family:'Noto Serif Thai',serif;font-size:16px;font-weight:700;color:var(--text);}
+.logo-text-en{font-size:10px;font-weight:500;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;}
+.dark-toggle{width:36px;height:36px;border:1.5px solid var(--border);border-radius:50%;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text2);flex-shrink:0;}
+.dark-toggle:hover{border-color:var(--border2);color:var(--text);}
+.ad-strip{background:var(--bg2);border-bottom:1px solid var(--border);display:flex;justify-content:center;padding:8px 16px;}
+.ad-728{width:100%;max-width:728px;height:90px;background:var(--bg);border:1.5px dashed var(--border2);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12px;}
+@media(max-width:600px){.ad-728{height:60px;}}
+.ad-mid{display:flex;justify-content:center;margin:28px 0;}
+.page-wrap{max-width:640px;margin:0 auto;padding:36px 20px 64px;}
+.page-heading{margin-bottom:28px;}
+.page-heading h1{font-family:'Noto Serif Thai',serif;font-size:clamp(28px,6vw,40px);font-weight:700;color:var(--text);line-height:1.15;letter-spacing:-0.5px;}
+.page-heading p{margin-top:8px;font-size:15px;color:var(--text2);}
+.field-label{font-size:13px;font-weight:600;color:var(--text2);letter-spacing:0.3px;margin-bottom:8px;display:block;}
+.hint{font-size:12px;color:var(--text3);margin-bottom:12px;}
+hr.section-hr{border:none;border-top:1px solid var(--border);margin:20px 0;}
+.mode-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px;}
+.mode-tab{padding:12px 8px;border:1.5px solid var(--border);border-radius:9px;background:var(--bg);font-family:'Sarabun',sans-serif;font-size:14px;font-weight:600;color:var(--text2);cursor:pointer;text-align:center;transition:all .15s;line-height:1.4;}
+.mode-tab.active{border-color:var(--ink);background:var(--ink);color:var(--bg);}
+.mode-tab:hover:not(.active){border-color:var(--border2);}
+.calc-panel{display:none;}
+.calc-panel.active{display:block;}
+.input-wrap{display:flex;align-items:center;border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:var(--bg);transition:border-color .15s,box-shadow .15s;margin-bottom:12px;}
+.input-wrap:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,0.1);}
+.input-wrap input{flex:1;padding:11px 14px;border:none;outline:none;font-family:'Sarabun',sans-serif;font-size:20px;font-weight:600;color:var(--text);background:transparent;width:100%;}
+.input-wrap input::placeholder{color:var(--text3);font-weight:400;font-size:15px;}
+.input-suffix{padding:0 14px;font-size:13px;font-weight:600;color:var(--text3);border-left:1px solid var(--border);background:var(--bg2);min-height:46px;display:flex;align-items:center;white-space:nowrap;}
+.btn-calc{width:100%;margin-top:8px;padding:13px;background:var(--ink);color:var(--bg);border:none;border-radius:9px;font-family:'Sarabun',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:opacity .15s,transform .1s;}
+.btn-calc:hover{opacity:0.85;}
+.btn-calc:active{transform:scale(0.99);}
+.btn-reset{width:100%;margin-top:8px;padding:11px;background:transparent;border:1.5px solid var(--border);border-radius:9px;font-family:'Sarabun',sans-serif;font-size:14px;color:var(--text2);cursor:pointer;transition:all .15s;}
+.btn-reset:hover{border-color:var(--border2);color:var(--text);}
+.result-box{display:none;margin-top:28px;animation:fadeUp .35s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.result-main{padding:28px 0 24px;border-top:1.5px solid var(--border);border-bottom:1.5px solid var(--border);margin-bottom:16px;}
+.result-label{font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:6px;}
+.result-num{font-family:'Noto Serif Thai',serif;font-size:clamp(52px,13vw,80px);font-weight:700;color:var(--text);line-height:1;letter-spacing:-2px;}
+.result-unit{font-family:'Noto Serif Thai',serif;font-size:22px;font-weight:400;color:var(--text2);margin-left:6px;vertical-align:bottom;display:inline-block;margin-bottom:6px;}
+.result-sub{font-size:15px;color:var(--text2);margin-top:10px;}
+.result-sub strong{color:var(--text);}
+.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1.5px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px;}
+.stat-cell{background:var(--bg);padding:16px;text-align:center;}
+.stat-num{font-family:'Noto Serif Thai',serif;font-size:20px;font-weight:700;color:var(--text);}
+.stat-label{font-size:12px;color:var(--text3);margin-top:3px;}
+.yearly-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px;}
+.yearly-title{font-size:11px;font-weight:600;color:var(--text3);letter-spacing:.5px;text-transform:uppercase;padding:12px 16px;border-bottom:1px solid var(--border);}
+.yearly-table{width:100%;border-collapse:collapse;font-size:13px;}
+.yearly-table th{text-align:left;padding:8px 16px;font-size:11px;font-weight:600;color:var(--text3);background:var(--bg2);}
+.yearly-table td{padding:8px 16px;border-top:1px solid var(--border);color:var(--text2);}
+.yearly-table tr:nth-child(even) td{background:var(--bg);}
+.yearly-table td:first-child{color:var(--text);font-weight:500;}
+.yearly-table td:last-child{color:var(--accent);font-weight:600;}
+.progress-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px;}
+.progress-label{display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:10px;}
+.progress-bar-wrap{height:8px;background:var(--border);border-radius:4px;overflow:hidden;}
+.progress-bar-fill{height:100%;border-radius:4px;background:var(--ink);transition:width .8s ease;}
+.progress-note{font-size:12px;color:var(--text3);margin-top:8px;}
+.share-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px;}
+.btn-share-action{padding:11px 8px;border-radius:9px;border:1.5px solid var(--border);background:transparent;font-family:'Sarabun',sans-serif;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.btn-share-action:hover{border-color:var(--border2);color:var(--text);}
+.history-section{margin-top:32px;border-top:1px solid var(--border);padding-top:24px;}
+.history-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.history-title{font-size:13px;font-weight:600;color:var(--text2);}
+.btn-clear-history{font-size:12px;color:var(--text3);background:none;border:none;cursor:pointer;font-family:'Sarabun',sans-serif;}
+.btn-clear-history:hover{color:var(--text2);}
+.history-list{display:flex;flex-direction:column;gap:8px;}
+.history-item{background:var(--bg2);border:1.5px solid var(--border);border-radius:9px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;}
+.history-item-left{flex:1;}
+.history-item-saving{font-family:'Noto Serif Thai',serif;font-size:18px;font-weight:700;color:var(--text);}
+.history-item-detail{font-size:12px;color:var(--text3);margin-top:2px;}
+.history-item-right{font-size:12px;color:var(--text3);}
+.history-empty{font-size:14px;color:var(--text3);text-align:center;padding:16px 0;}
+.info-section{border-top:1px solid var(--border);padding-top:32px;}
+.info-section h2{font-family:'Noto Serif Thai',serif;font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.info-section h2.mt{margin-top:24px;}
+.info-section p{font-size:14px;color:var(--text2);line-height:1.85;}
+footer{border-top:1px solid var(--border);padding:24px 20px;text-align:center;font-size:13px;color:var(--text3);}
+footer a{color:var(--text3);text-decoration:none;}
+footer a:hover{color:var(--text2);text-decoration:underline;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;transition:transform .3s ease;z-index:999;pointer-events:none;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+<header>
+  <a class="header-logo" href="/">
+    <div class="logo-icon">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="7" fill="var(--logo-fill)"/>
+        <text x="5" y="24" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="var(--bg)">K</text>
+        <text x="14" y="27" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="var(--bg)">+×=</text>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-text-th">คำนวณ</span>
+      <span class="logo-text-en">KAMNUAN</span>
+    </div>
+  </a>
+  <button class="dark-toggle" onclick="toggleDark()" title="เปลี่ยนธีม">
+    <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+</header>
+
+<div class="ad-strip"><div class="ad-728">📢 Google AdSense — 728×90 Leaderboard (Top)</div></div>
+
+<div class="page-wrap">
+  <div class="page-heading">
+    <h1>คำนวณเงินออม</h1>
+    <p>วางแผนการออมเงิน รู้ว่าต้องออมเดือนละเท่าไหร่ หรือออมแล้วจะได้เท่าไหร่</p>
+  </div>
+
+  <div class="mode-tabs">
+    <button class="mode-tab active" id="tabGoal" onclick="switchMode('goal')">ออมเท่าไหร่ถึงจะถึงเป้า</button>
+    <button class="mode-tab" id="tabResult" onclick="switchMode('result')">ออมแล้วจะได้เท่าไหร่</button>
+  </div>
+
+  <!-- Mode 1: เป้าหมาย → รู้ว่าต้องออมเดือนละเท่าไหร่ -->
+  <div class="calc-panel active" id="panel-goal">
+    <span class="field-label">เป้าหมายเงินออม</span>
+    <div class="input-wrap">
+      <input type="text" id="g-target" placeholder="เช่น 1,000,000" inputmode="numeric" oninput="fmtInput(this)">
+      <span class="input-suffix">บาท</span>
+    </div>
+    <span class="field-label">ระยะเวลาที่ต้องการ</span>
+    <div class="input-wrap">
+      <input type="number" id="g-years" placeholder="เช่น 10" min="1" inputmode="numeric">
+      <span class="input-suffix">ปี</span>
+    </div>
+    <span class="field-label">อัตราดอกเบี้ยต่อปี</span>
+    <div class="input-wrap">
+      <input type="number" id="g-rate" placeholder="เช่น 2.5" min="0" step="0.1" inputmode="decimal">
+      <span class="input-suffix">% ต่อปี</span>
+    </div>
+    <span class="field-label">เงินออมที่มีอยู่แล้ว <span style="color:var(--text3);font-weight:400;">(ถ้ามี)</span></span>
+    <div class="input-wrap">
+      <input type="text" id="g-existing" placeholder="0" inputmode="numeric" oninput="fmtInput(this)">
+      <span class="input-suffix">บาท</span>
+    </div>
+    <p class="hint">ตัวอย่าง: อยากมีเงิน 1,000,000 บาทใน 10 ปี ดอกเบี้ย 2.5% ต้องออมเดือนละเท่าไหร่</p>
+    <button class="btn-calc" onclick="calcGoal()">คำนวณ</button>
+    <button class="btn-reset" onclick="resetForm()">เริ่มใหม่</button>
+  </div>
+
+  <!-- Mode 2: ออมแล้วจะได้เท่าไหร่ -->
+  <div class="calc-panel" id="panel-result">
+    <span class="field-label">ออมต่อเดือน</span>
+    <div class="input-wrap">
+      <input type="text" id="r-monthly" placeholder="เช่น 5,000" inputmode="numeric" oninput="fmtInput(this)">
+      <span class="input-suffix">บาท/เดือน</span>
+    </div>
+    <span class="field-label">ระยะเวลา</span>
+    <div class="input-wrap">
+      <input type="number" id="r-years" placeholder="เช่น 10" min="1" inputmode="numeric">
+      <span class="input-suffix">ปี</span>
+    </div>
+    <span class="field-label">อัตราดอกเบี้ยต่อปี</span>
+    <div class="input-wrap">
+      <input type="number" id="r-rate" placeholder="เช่น 2.5" min="0" step="0.1" inputmode="decimal">
+      <span class="input-suffix">% ต่อปี</span>
+    </div>
+    <span class="field-label">เงินออมที่มีอยู่แล้ว <span style="color:var(--text3);font-weight:400;">(ถ้ามี)</span></span>
+    <div class="input-wrap">
+      <input type="text" id="r-existing" placeholder="0" inputmode="numeric" oninput="fmtInput(this)">
+      <span class="input-suffix">บาท</span>
+    </div>
+    <p class="hint">ตัวอย่าง: ออมเดือนละ 5,000 บาท นาน 10 ปี ดอกเบี้ย 2.5% จะมีเงินเท่าไหร่</p>
+    <button class="btn-calc" onclick="calcResult()">คำนวณ</button>
+    <button class="btn-reset" onclick="resetForm()">เริ่มใหม่</button>
+  </div>
+
+  <!-- Result -->
+  <div class="result-box" id="resultBox">
+    <div class="result-main">
+      <div class="result-label" id="resultLabel">–</div>
+      <div>
+        <span class="result-num" id="resultNum">–</span>
+        <span class="result-unit">บาท</span>
+      </div>
+      <div class="result-sub" id="resultSub"></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-cell"><div class="stat-num" id="totalDeposit">–</div><div class="stat-label">เงินต้นรวม (บาท)</div></div>
+      <div class="stat-cell"><div class="stat-num" id="totalInterest">–</div><div class="stat-label">ดอกเบี้ยรวม (บาท)</div></div>
+      <div class="stat-cell"><div class="stat-num" id="rule72">–</div><div class="stat-label">เงินเป็น 2 เท่าใน (ปี) *กฎ 72</div></div>
+      <div class="stat-cell"><div class="stat-num" id="perMonth">–</div><div class="stat-label">ดอกเบี้ยเฉลี่ยต่อเดือน (บาท)</div></div>
+    </div>
+
+    <div class="yearly-card">
+      <div class="yearly-title">ตารางเงินออมรายปี</div>
+      <div style="overflow-x:auto;">
+        <table class="yearly-table">
+          <thead><tr><th>ปีที่</th><th>เงินต้นสะสม</th><th>ดอกเบี้ยสะสม</th><th>ยอดรวม</th></tr></thead>
+          <tbody id="yearlyBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <p style="font-size:11px;color:var(--text3);text-align:center;margin-bottom:12px;">ผลลัพธ์เป็นการประมาณการ อัตราดอกเบี้ยจริงอาจเปลี่ยนแปลงได้ตามนโยบายของสถาบันการเงิน</p>
+
+    <div class="progress-card">
+      <div class="progress-label"><span>สัดส่วนดอกเบี้ย vs เงินต้น</span><span id="interestRatio">–</span></div>
+      <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBar" style="width:0%"></div></div>
+      <div class="progress-note" id="progressNote"></div>
+    </div>
+
+    <div class="share-row">
+      <button class="btn-share-action" onclick="shareLine()">Line</button>
+      <button class="btn-share-action" onclick="shareFacebook()">Facebook</button>
+      <button class="btn-share-action" onclick="copyResult()">คัดลอก</button>
+    </div>
+  </div>
+
+  <div class="history-section">
+    <div class="history-header">
+      <span class="history-title">ประวัติการคำนวณ</span>
+      <button class="btn-clear-history" onclick="clearHistory()">ล้างประวัติ</button>
+    </div>
+    <div class="history-list" id="historyList">
+      <div class="history-empty">ยังไม่มีประวัติการคำนวณ</div>
+    </div>
+  </div>
+
+  <div class="ad-mid"><div class="ad-728">📢 Google AdSense — 728×90 Leaderboard (In-content)</div></div>
+
+  <div class="info-section">
+    <h2>ดอกเบี้ยทบต้นคืออะไร</h2>
+    <p>ดอกเบี้ยทบต้น (Compound Interest) คือการที่ดอกเบี้ยที่ได้รับจะถูกนำไปรวมกับเงินต้น แล้วคิดดอกเบี้ยในรอบถัดไปจากยอดรวมนี้ ทำให้เงินเติบโตแบบทวีคูณเมื่อระยะเวลายาวขึ้น</p>
+    <h2 class="mt">กฎ 72</h2>
+    <p>กฎ 72 คือวิธีประมาณว่าเงินจะเพิ่มเป็นสองเท่าในกี่ปี โดยนำ 72 หารด้วยอัตราดอกเบี้ย เช่น ดอกเบี้ย 6% ต่อปี เงินจะเพิ่มเป็นสองเท่าในประมาณ 72÷6 = 12 ปี</p>
+  </div>
+
+  <div class="ad-mid" style="margin-bottom:0;"><div class="ad-728">📢 Google AdSense — 728×90 Leaderboard (Bottom)</div></div>
+</div>
+
+<footer>
+  <p>© 2568 คำนวณเงินออมออนไลน์ · <a href="#">นโยบายความเป็นส่วนตัว</a> · <a href="#">ติดต่อ</a></p>
+  <p style="margin-top:4px;">ผลลัพธ์เป็นการประมาณการ อัตราดอกเบี้ยจริงอาจเปลี่ยนแปลงได้</p>
+</footer>
+<div class="toast" id="toast">คัดลอกแล้ว!</div>
+
+<script>
+function initTheme(){const s=localStorage.getItem('theme');const p=window.matchMedia('(prefers-color-scheme: dark)').matches;applyTheme(s||(p?'dark':'light'));}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);document.getElementById('iconSun').style.display=t==='dark'?'block':'none';document.getElementById('iconMoon').style.display=t==='light'?'block':'none';localStorage.setItem('theme',t);}
+function toggleDark(){applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');}
+initTheme();
+
+let currentMode='goal';
+let lastResult=null;
+
+function switchMode(mode){
+  currentMode=mode;
+  document.getElementById('tabGoal').classList.toggle('active',mode==='goal');
+  document.getElementById('tabResult').classList.toggle('active',mode==='result');
+  document.getElementById('panel-goal').classList.toggle('active',mode==='goal');
+  document.getElementById('panel-result').classList.toggle('active',mode==='result');
+  document.getElementById('resultBox').style.display='none';
+}
+
+function fmtInput(el){const r=el.value.replace(/[^0-9]/g,'');if(!r){el.value='';return;}el.value=parseInt(r).toLocaleString('th-TH');}
+function getRaw(id){return parseFloat(document.getElementById(id).value.replace(/,/g,''))||0;}
+function fmt(n){return Math.round(n).toLocaleString('th-TH');}
+
+/* ── Mode 1: หาว่าต้องออมเดือนละเท่าไหร่ ── */
+function calcGoal(){
+  const target=getRaw('g-target');
+  const years=parseFloat(document.getElementById('g-years').value)||0;
+  const rate=parseFloat(document.getElementById('g-rate').value)||0;
+  const existing=getRaw('g-existing');
+  if(!target||!years){alert('กรุณากรอกข้อมูลให้ครบ');return;}
+
+  const n=years*12;
+  const r=rate/100/12;
+
+  const fvExisting=existing*Math.pow(1+r,n);
+  const remaining=Math.max(0,target-fvExisting);
+
+  let monthly;
+  if(r===0) monthly=remaining/n;
+  else monthly=remaining*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+
+  // คำนวณ FV จริง ไม่ใช้ target
+  let fvActual;
+  if(r===0) fvActual=monthly*n+existing;
+  else fvActual=monthly*(Math.pow(1+r,n)-1)/r+existing*Math.pow(1+r,n);
+
+  const totalDeposit=monthly*n+existing;
+  const totalInterest=fvActual-totalDeposit;
+
+  showResult(monthly,'ออมต่อเดือน',fvActual,totalDeposit,totalInterest,
+    `เป้าหมาย <strong>${fmt(target)}</strong> บาท ใน <strong>${years}</strong> ปี · ดอกเบี้ย <strong>${rate}%</strong>`,rate,monthly,years,existing);
+}
+
+/* ── Mode 2: หาว่าออมแล้วจะได้เท่าไหร่ ── */
+function calcResult(){
+  const monthly=getRaw('r-monthly');
+  const years=parseFloat(document.getElementById('r-years').value)||0;
+  const rate=parseFloat(document.getElementById('r-rate').value)||0;
+  const existing=getRaw('r-existing');
+  if(!monthly||!years){alert('กรุณากรอกข้อมูลให้ครบ');return;}
+
+  const n=years*12;
+  const r=rate/100/12;
+
+  let fv;
+  if(r===0) fv=monthly*n+existing;
+  else fv=monthly*(Math.pow(1+r,n)-1)/r+existing*Math.pow(1+r,n);
+
+  const totalDeposit=monthly*n+existing;
+  const totalInterest=fv-totalDeposit;
+
+  showResult(fv,'เงินออมรวมที่จะได้รับ',fv,totalDeposit,totalInterest,
+    `ออมเดือนละ <strong>${fmt(monthly)}</strong> บาท นาน <strong>${years}</strong> ปี · ดอกเบี้ย <strong>${rate}%</strong>`,rate,monthly,years,existing);
+}
+
+function showResult(mainNum, label, total, deposit, interest, sub, rate, monthly, years, existing=0){
+  document.getElementById('resultLabel').textContent=label;
+  document.getElementById('resultNum').textContent=fmt(mainNum);
+  document.getElementById('resultSub').innerHTML=sub;
+  document.getElementById('totalDeposit').textContent=fmt(deposit);
+  document.getElementById('totalInterest').textContent=fmt(Math.max(0,interest));
+
+  // กฎ 72
+  document.getElementById('rule72').textContent=rate>0?parseFloat((72/rate).toFixed(1)):'–';
+
+  // ดอกเบี้ยเฉลี่ยต่อเดือน
+  const months=years*12;
+  document.getElementById('perMonth').textContent=months>0?fmt(Math.max(0,interest)/months):'–';
+
+  const interestPct=total>0?Math.max(0,interest/total*100):0;
+  setTimeout(()=>{document.getElementById('progressBar').style.width=interestPct+'%';},100);
+  document.getElementById('interestRatio').textContent=`ดอกเบี้ย ${interestPct.toFixed(1)}%`;
+  document.getElementById('progressNote').textContent=`เงินต้น ${fmt(deposit)} บาท + ดอกเบี้ย ${fmt(Math.max(0,interest))} บาท`;
+
+  // ตารางรายปี
+  const r=rate/100/12;
+  let tbody='';
+  for(let y=1;y<=Math.min(years,30);y++){
+    const n=y*12;
+    let fv;
+    if(r===0) fv=monthly*n+existing;
+    else fv=monthly*(Math.pow(1+r,n)-1)/r+existing*Math.pow(1+r,n);
+    const dep=monthly*n+existing;
+    const int=Math.max(0,fv-dep);
+    tbody+=`<tr><td>${y}</td><td>${fmt(dep)}</td><td>${fmt(int)}</td><td>${fmt(fv)}</td></tr>`;
+  }
+  document.getElementById('yearlyBody').innerHTML=tbody;
+
+  lastResult={mainNum,label,total,deposit,interest,sub:sub.replace(/<[^>]+>/g,'')};
+  saveHistory({saving:fmt(mainNum)+' บาท',detail:sub.replace(/<[^>]+>/g,'')});
+
+  const box=document.getElementById('resultBox');box.style.display='block';
+  requestAnimationFrame(()=>box.scrollIntoView({behavior:'smooth',block:'nearest'}));
+}
+
+function resetForm(){['g-target','g-years','g-rate','g-existing','r-monthly','r-years','r-rate','r-existing'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});document.getElementById('resultBox').style.display='none';}
+
+function getShareText(){if(!lastResult)return'';return`คำนวณเงินออม\n${lastResult.sub}\n${lastResult.label} = ${fmt(lastResult.mainNum)} บาท\nเงินต้นรวม ${fmt(lastResult.deposit)} บาท · ดอกเบี้ย ${fmt(Math.max(0,lastResult.interest))} บาท\nhttps://pntsm12.github.io/kamnuanngoenoom/`;}
+function shareLine(){window.open('https://line.me/R/msg/text/?'+encodeURIComponent(getShareText()),'_blank');}
+function shareFacebook(){window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://pntsm12.github.io/kamnuanngoenoom/'),'_blank');}
+function copyResult(){const text=getShareText();navigator.clipboard.writeText(text).then(showToast).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast();});}
+
+function saveHistory(r){const item={saving:r.saving,detail:r.detail,time:new Date().toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'})};let h=JSON.parse(localStorage.getItem('savingHistory')||'[]');h.unshift(item);h=h.slice(0,5);localStorage.setItem('savingHistory',JSON.stringify(h));renderHistory();}
+function renderHistory(){const list=document.getElementById('historyList');const h=JSON.parse(localStorage.getItem('savingHistory')||'[]');if(!h.length){list.innerHTML='<div class="history-empty">ยังไม่มีประวัติการคำนวณ</div>';return;}list.innerHTML=h.map(item=>`<div class="history-item"><div class="history-item-left"><div class="history-item-saving">${item.saving}</div><div class="history-item-detail">${item.detail}</div></div><div class="history-item-right">${item.time}</div></div>`).join('');}
+function clearHistory(){localStorage.removeItem('savingHistory');renderHistory();}
+function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+renderHistory();
+</script>
+</body>
+</html>
